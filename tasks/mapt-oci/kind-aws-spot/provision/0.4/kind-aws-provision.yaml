@@ -364,10 +364,12 @@ spec:
           - name: revision
             value: $(params.catalog-revision)
           - name: pathInRepo
-            value: stepactions/protect-control-plane/0.2/protect-control-plane.yaml
+            value: stepactions/protect-control-plane/0.4/protect-control-plane.yaml
       params:
         - name: harden-control-plane
           value: $(params.harden-control-plane)
+        - name: kubernetes-version
+          value: $(params.version)
         - name: kubeconfig-dir
           value: /opt/cluster-info
         - name: kubeconfig-volume-name
